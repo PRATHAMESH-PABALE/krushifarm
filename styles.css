@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background: rgba(0, 100, 0, 0.95);
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+#searchBox {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.lang-buttons {
+    margin-top: 10px;
+}
+
+.lang-buttons button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #ffcc00;
+    font-size: 16px;
+}
+
+.lang-buttons button:hover {
+    background: #ffaa00;
+}
+
+.scheme-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.scheme-card {
+    background: white;
+    padding: 15px;
+    margin: 15px;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.scheme-card:hover {
+    transform: scale(1.05);
+}
+
+.scheme-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.scheme-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.scheme-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    #searchBox {
+        width: 90%;
+    }
+
+    .scheme-card {
+        width: 95%;
+    }
+}

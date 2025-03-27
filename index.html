@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Government Farming Schemes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Government Farming Schemes</h1>
+        <input type="text" id="searchBox" placeholder="Search schemes..." onkeyup="searchSchemes()">
+        <div class="lang-buttons">
+            <button onclick="changeLanguage('hi')">हिंदी</button>
+            <button onclick="changeLanguage('mr')">मराठी</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <div class="scheme-container" id="schemeContainer">
+        <div class="scheme-card" onclick="showDetails('PM Kisan Yojana')">
+            <img src="images/pmkisaan.jpg" alt="PM Kisan Yojana">
+            <h2 id="pmKisanTitle">PM Kisan Yojana</h2>
+            <p id="pmKisanDesc">Financial support for small farmers</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('Soil Health Card Scheme')">
+            <img src="images/soil.jpg" alt="Soil Health Card Scheme">
+            <h2 id="soilHealthTitle">Soil Health Card Scheme</h2>
+            <p id="soilHealthDesc">Provides soil testing and fertility analysis</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('Kisan Credit Card')">
+            <img src="images/kisancard.png" alt="Kisan Credit Card">
+            <h2 id="kisanCreditTitle">Kisan Credit Card</h2>
+            <p id="kisanCreditDesc">Low-interest loans for farmers</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('PM-Kisan Samman Nidhi')">
+            <img src="images/samaan.png" alt="PM-Kisan Samman Nidhi">
+            <h2 id="pmSammanTitle">PM-Kisan Samman Nidhi</h2>
+            <p id="pmSammanDesc">₹6,000 annual income support to small farmers</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('Pradhan Mantri Fasal Bima Yojana')">
+            <img src="images/fasal.jpg" alt="Pradhan Mantri Fasal Bima Yojana">
+            <h2 id="fasalBimaTitle">Pradhan Mantri Fasal Bima Yojana</h2>
+            <p id="fasalBimaDesc">Crop insurance against natural disasters</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('Pradhan Mantri Krishi Sinchai Yojana')">
+            <img src="images/krishi.jpeg" alt="Pradhan Mantri Krishi Sinchai Yojana">
+            <h2 id="krishiSinchaiTitle">Pradhan Mantri Krishi Sinchai Yojana</h2>
+            <p id="krishiSinchaiDesc">Water conservation & irrigation improvement</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('Pradhan Mantri Kisan Maan-Dhan Yojana')">
+            <img src="images/maandhaan.jpg" alt="Pradhan Mantri Kisan Maan-Dhan Yojana">
+            <h2 id="maanDhanTitle">Pradhan Mantri Kisan Maan-Dhan Yojana</h2>
+            <p id="maanDhanDesc">Pension scheme for small & marginal farmers</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('Agriculture Infrastructure Fund')">
+            <img src="images/aif.jpg" alt="Agriculture Infrastructure Fund">
+            <h2 id="agriInfraTitle">Agriculture Infrastructure Fund</h2>
+            <p id="agriInfraDesc">Funds for storage & infrastructure development</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('National Mission for Sustainable Agriculture')">
+            <img src="images/nmsa.jpg" alt="National Mission for Sustainable Agriculture">
+            <h2 id="nmsaTitle">National Mission for Sustainable Agriculture</h2>
+            <p id="nmsaDesc">Climate-resilient agriculture practices</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('Paramparagat Krishi Vikas Yojana')">
+            <img src="images/pkvy.jpg" alt="Paramparagat Krishi Vikas Yojana">
+            <h2 id="pkvyTitle">Paramparagat Krishi Vikas Yojana</h2>
+            <p id="pkvyDesc">Encouraging organic farming</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('National Food Security Mission')">
+            <img src="images/nfsm.jpg" alt="National Food Security Mission">
+            <h2 id="nfsmTitle">National Food Security Mission</h2>
+            <p id="nfsmDesc">Boosts production of rice, wheat, and pulses</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('Rashtriya Krishi Vikas Yojana')">
+            <img src="images/rkvy.jpg" alt="Rashtriya Krishi Vikas Yojana">
+            <h2 id="rkvyTitle">Rashtriya Krishi Vikas Yojana</h2>
+            <p id="rkvyDesc">Financial aid for innovative agricultural projects</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('Dairy Entrepreneurship Development Scheme')">
+            <img src="images/nabard.jpg" alt="Dairy Entrepreneurship Development Scheme">
+            <h2 id="dairyTitle">Dairy Entrepreneurship Development Scheme</h2>
+            <p id="dairyDesc">Financial support for dairy farming</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('Formation of 10,000 Farmer Producer Organizations')">
+            <img src="images/fp.jpg" alt="Formation of 10,000 Farmer Producer Organizations">
+            <h2 id="fpoTitle">Formation of 10,000 Farmer Producer Organizations</h2>
+            <p id="fpoDesc">Empowering farmers through FPOs</p>
+        </div>
+
+        <div class="scheme-card" onclick="showDetails('National Livestock Mission')">
+            <img src="images/nlm.jpg" alt="National Livestock Mission">
+            <h2 id="nlmTitle">National Livestock Mission</h2>
+            <p id="nlmDesc">Support for poultry, goatery & animal husbandry</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

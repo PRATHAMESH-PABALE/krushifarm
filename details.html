@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheme Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .back-link {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .scheme-details-container {
+            padding: 20px;
+        }
+
+        .scheme-description {
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: justify;
+            padding: 0 10px;
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .scheme-image {
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .video-link, .website-link {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .video-link {
+            color: #007BFF;
+        }
+
+        .website-link {
+            color: #FF5733;
+        }
+
+        .video-link:hover, .website-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 768px) {
+            .media-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .scheme-image {
+                flex: 1;
+                max-width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="schemeTitle">Scheme Details</h1>
+        <a class="back-link" href="index.html">← Back to Home</a>
+    </header>
+
+    <div class="scheme-details-container">
+        <div id="schemeInfo" class="scheme-details"></div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const schemeName = urlParams.get('scheme');
+
+        const schemeData = {
+            "PM Kisan Yojana": { 
+                description: "Financial support of ₹6,000 per year for small and marginal farmers. ₹6,000 per year given in three equal installments of ₹2,000 each.",
+                image: "images/pmkisaan.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=rhSYIVTSlvs",
+                websiteUrl: "https://pmkisan.gov.in/"
+            },
+            "Soil Health Card Scheme": { 
+                description: "Provides soil testing to improve fertility. Farmers receive a soil health card every two years.",
+                image: "images/soil.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=r4IMCbV4WzE",
+                websiteUrl: "https://www.soilhealth.dac.gov.in/"
+            },
+            "Kisan Credit Card": { 
+                description: "Provides short-term credit to farmers for agricultural needs.",
+                image: "images/kisancard.png",
+                videoUrl: "https://www.youtube.com/watch?v=k766_q17tOA",
+                websiteUrl: "https://pmkisan.gov.in/KCC"
+            },
+            "PM-Kisan Samman Nidhi": { 
+                description: "Income support of ₹6,000 per year in three equal installments.",
+                image: "images/samaan.png",
+                videoUrl: "https://www.youtube.com/watch?v=vyBqpGjftac",
+                websiteUrl: "https://pmkisan.gov.in/"
+            },
+            "Pradhan Mantri Fasal Bima Yojana": { 
+                description: "Crop insurance for farmers covering risks from pre-sowing to post-harvest.",
+                image: "images/fasal.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=TxyjZq5UoZw",
+                websiteUrl: "https://pmfby.gov.in/"
+            },
+            "Pradhan Mantri Krishi Sinchai Yojana": { 
+                description: "A scheme to improve irrigation efficiency.",
+                image: "images/krishi.jpeg",
+                videoUrl: "https://www.youtube.com/watch?v=b71U7mO9Hqg",
+                websiteUrl: "https://pmksy.gov.in/"
+            },
+            "Pradhan Mantri Kisan Maan-Dhan Yojana": { 
+                description: "Pension scheme for small and marginal farmers.",
+                image: "images/maandhaan.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=wDAdyPLU4GI",
+                websiteUrl: "https://maandhan.in/"
+            },
+            "Agriculture Infrastructure Fund": { 
+                description: "Financial support for modern agricultural infrastructure.",
+                image: "images/aif.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=V3MJQtsM9zA",
+                websiteUrl: "https://agriinfra.dac.gov.in/"
+            },
+            "National Mission for Sustainable Agriculture": { 
+                description: "Promotes climate-resilient agriculture.",
+                image: "images/nmsa.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=R4mTqzlhpJk",
+                websiteUrl: "https://nmsa.dac.gov.in/"
+            },
+            "Paramparagat Krishi Vikas Yojana": { 
+                description: "Encourages organic farming by promoting chemical-free methods.",
+                image: "images/pkvy.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=XxUBy03st9M",
+                websiteUrl: "https://pgsindia-ncof.gov.in/"
+            },
+            "National Food Security Mission": { 
+                description: "Ensures food security by supporting crop production.",
+                image: "images/nfsm.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=7D7cXtRMIWI",
+                websiteUrl: "https://nfsm.gov.in/"
+            },
+            "Rashtriya Krishi Vikas Yojana": { 
+                description: "Boosts agricultural productivity.",
+                image: "images/rkvy.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=5QnRpOl1G7c",
+                websiteUrl: "https://rkvy.nic.in/"
+            },
+            "Dairy Entrepreneurship Development Scheme": { 
+                description: "Supports dairy businesses with subsidized loans.",
+                image: "images/nabard.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=8Ty54IF00lA",
+                websiteUrl: "https://nabard.org/"
+            },
+            "Formation and Promotion of 10,000 Farmer Producer Organizations": { 
+                description: "Encourages farmers to form FPOs.",
+                image: "images/fp.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=6z9c5H7Np64",
+                websiteUrl: "https://sfacindia.com/"
+            },
+            "National Livestock Mission": { 
+                description: "Supports livestock farmers with subsidies.",
+                image: "images/nlm.jpg",
+                videoUrl: "https://www.youtube.com/watch?v=kDqHVdd9S-M",
+                websiteUrl: "https://nlm.dahd.nic.in/"
+            }
+        };
+
+        document.getElementById('schemeTitle').innerText = schemeName;
+
+        if (schemeData[schemeName]) {
+            document.getElementById('schemeInfo').innerHTML = `
+                <p class="scheme-description">${schemeData[schemeName].description}</p>
+                <div class="media-container">
+                    <img src="${schemeData[schemeName].image}" class="scheme-image">
+                </div>
+                <a href="${schemeData[schemeName].videoUrl}" class="video-link" target="_blank">Watch on YouTube</a>
+                <a href="${schemeData[schemeName].websiteUrl}" class="website-link" target="_blank">Visit Official Website</a>
+            `;
+        }
+    </script>
+</body>
+</html>
